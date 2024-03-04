@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Kanit', sans-serif;
+}
+
+html,body{
+    height:100%;
+}
+
+@font-face{
+    font-family:Kanit;
+    src: url('../fonts/Kanit') format('ttf');
+    src: url('../fonts/Kanit') format('woff');
+    src: url('../fonts/Kanit') format('woff2');
+}
+
+/***************header-style***************/
+
+
+header{
+    width:100%;
+    height:20vh;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:flex-end;
+    background:rgb(10,10,100);
+    background:linear-gradient(90deg, rgba(20, 10, 100, 1.0)0%, rgba(10,10,150,.7) 50%, rgba(5,15,160,.8) 100%);
+    position:relative;
+}
+
+/**************texto******************/
+
+header h3{
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    color: whitesmoke;
+    text-transform:uppercase;
+    padding:0;
+    width: 24.5%;
+    white-space: nowrap;
+    background: rgb(10, 100, 100);
+    border-radius:20px;
+    overflow: hidden;
+}
+
+header h3 > span{
+    color: rgb(11,32,97);
+}
+
+/**************text-animation******************/
+
+header h3.line{
+    border-right:4px solid rgb(10, 200, 100);
+    animation:cursor 10000ms infinite ease-in-out alternate;
+    transition:1s;
+}
+
+@keyframes cursor{
+   0%{
+        width:0;
+        padding-left: 2px;
+   } 
+
+   100%{
+        padding:10px;
+        width:26%;
+        color:rgb(34, 235, 242);
+   }
+}
+
+/**********Links-nav***********/
+
+
+header nav{
+    padding:15px 0;
+}
+
+nav ul{
+    display:flex;
+    list-style-type:none;
+}
+
+nav ul li{
+    margin:0;
+    width:160px;
+    font-size:20px;
+    font-weight:600;
+}
+
+nav ul li a::before{
+    content:"";
+    position:relative;
+}
+
+nav ul li a{
+    position:absolute;
+    text-decoration:none;
+    color: rgb(100,10,100);
+    transition:1s;
+    background-color: rgb(100, 220, 100, 1.0);
+    border-radius:10px;
+    padding:1%;
+}
+
+ul li a:hover{
+    font-size:22px;
+    transform:translate(2px,3px);
+}
+
+/***************text-info-corp******************/
+
+
+.corp{
+    width:100%;
+    height: 75vh;
+    margin:0 auto;
+    text-align: center;
+    padding:0 100px;
+}
+
+.corp .container{
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+}
+
+.container .content{
+    max-width:1300px;
+    width:100%;
+    height:100%;
+}
+
+.content .text-info{
+    /*background:rgba(20, 10, 10, 0.2);*/
+}
+
+.content .text-info h1{
+    font-size: 19px;
+    font-weight:600;
+    color: rgb(8, 32, 92);
+    margin-bottom:10px;
+}
+
+.content .text-info > h1 > span{
+    font-size: 18px;
+    font-style:italic;
+    font-weight:500;
+}
+
+.content .text-info h1 ~ p{
+    font-weight:700;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(6, 61, 199);
+}
+
+.content .text-info a.btn-saiba-mais{
+    padding:10px;
+    background-color: rgba(10, 10, 100, 0.8);
+    margin:10px;
+    color: white;
+    text-decoration:none;
+    font-weight:800;
+    display:inline-block;
+    border-radius:20px;
+}
+
+.content .info-box{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-flow:column wrap;
+    align-items:flex-start;
+    background-color: #ccc;
+}
+
+.info-box h2{
+    font-size: 20px;
+    text-transform:uppercase;
+    color: rgba(10, 10, 100, 0.8);
+    padding:10px 2%;
+}
+
+.info-box ul,ul ~ p{
+    list-style-type:none;
+    width:100%;
+    text-align: justify;
+    padding: 0 2%;
+}
+
+.info-box ul li{
+    width:calc(100% - 60%);
+    font-weight:500;
+    font-size: 17px;
+    font-style: italic;
+    border-bottom:1px solid black;
+    color: rgb(100, 20, 100);
+    text-shadow:1px 0px;
+}
+
+.info-box p{
+    font-size: 20px;
+    font-weight:600;
+    color: rgb(100, 0, 220);
+    margin:5px 0;
+}
+
+/*************** main ***************/
+
+.text-{
+    max-width:800px;
+    width:100%;
+    height:30px;
+    font-size:20px;
+    font-weight:600;
+    font-style:italic;
+    color: rgb(10, 20, 250);
+    padding:5px;
+    margin:10px auto 10px;
+    text-align: center;
+    transition:2s ease-in-out;
+    text-transform:uppercase;
+    cursor:default;
+}
+
+.text- h4 > mark{
+    color: #0d11e0;
+    background: rgba(10, 200, 250, 1.0);
+    background:linear-gradient(160deg, rgba(10, 200, 250, 1.0)0%, rgba(20, 190, 260, 0.7) 50%, rgba(15, 190, 250, 1.0)100%);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.text-:hover{
+    font-size: 22px;
+    box-shadow:2px 2px 5px rgba(20,40,200,0.7);
+}
+
+
+/***************section-veiculos******************/
+
+section.body-sec, section.body-sec-2{
+    max-width:1300px;
+    width:100%;
+    height:auto;
+    margin:0 auto 10px;
+    display:grid;
+    gap:0;
+    grid-template-columns:auto auto auto;
+    grid-template-rows:auto auto;
+}
+
+section.produto-section{
+    width:100%;
+    height:100%;
+    padding:1%;
+}
+
+.produto-section .container{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:center;
+}
+
+.produto-section .container img.img{
+    width:70%;
+    height:160px;
+    transform:translate(20%,0);
+    z-index:1;
+    filter:saturate(2);
+}
+
+.produto-section .container img.img:hover{
+    border-radius: 20px;
+    margin: 0 auto;
+    transform:scale(1.1);
+    z-index: 999;
+}
+
+
+
+/****************efect-image*********************/
+
+
+.container h2{
+    text-align:center;
+    margin:8px 0;
+    font-size: 19px;
+    font-weight:900;
+    color: rgba(20, 10, 100,1.9);
+    border-bottom:2px dotted #f2cccc;
+}
+
+.container p{
+    width:98%;
+    height: auto;
+    text-align: left;
+    padding:1% 2%;
+    font-size: 12px;
+    font-weight:700;
+    font-style: normal;
+    color:rgba(20,10,100,1.9);
+    text-transform:uppercase;
+}
+
+.container .inf{
+    padding:2% 0;
+}
+
+.body-sec .container .inf span, 
+.body-sec-2 .container .inf-2 span{
+    padding:0 2%;
+    color: rgb(10, 60, 140);
+    font-weight:600;
+    word-spacing:3px;
+    font-size: 20px;
+    margin-bottom:20px;
+    display:block;
+    position:relative;
+}
+
+/**********animation span***********/
+
+/*inf 1°*/
+.container .inf span::before{
+    content:"";
+    position:absolute;
+    top: 26px;
+    left: 0;
+    background:rgba(20, 10, 100, 1.0);
+
+    /*position*/
+
+    width:40%;
+    height:2px;
+    transform-origin:left;
+    transform:scale(0);
+    transition:transform 2s infinite;
+    animation:lin- 3000ms ease-out infinite;
+}
+
+/*inf 2°*/
+.container .inf-2 span::before{
+    content:"";
+    position:absolute;
+    top: 26px;
+    left: 0;
+    background:rgba(20, 10, 100, 1.0);
+
+    /*position*/
+
+    width:40%;
+    height:2px;
+    transform-origin:left;
+    transform:scale(0);
+    transition:transform 2s infinite;
+    animation:lin- 3000ms ease-out infinite;
+}
+
+@keyframes lin-{
+    0%{
+        transform:scale(0);
+    }
+
+    100%{
+        background:rgba(20, 100, 100, 1.0);
+        transform:scale(1);
+    }
+}  
+
+/********button********/  
+
+.container .inf .botao, .inf-2 .botao{
+    width:100%;
+    text-align:center;
+    padding:4%;
+    /*background-color: black;*/
+}
+
+.container .inf button, .container .inf-2 button{
+    padding:2%;
+    font-size: 17px;
+    font-weight:800;
+    text-transform:uppercase;
+    border:0;
+    border-radius:15px 20px 15px 20px;
+    background: rgba(10, 200, 250, 1.0);
+    background:linear-gradient(160deg, rgba(10, 200, 250, 1.0)0%, rgba(20, 190, 260, 0.7) 50%, rgba(15, 190, 250, 1.0)100%);
+    transition:background 1s infinite;
+    cursor:pointer;
+    color: rgb(11,14,79);
+}
+
+/***********ani-button************/
+
+.produto-section .container button:hover{
+    animation: back 1s ease-out infinite alternate;
+}
+
+@keyframes back{
+    0%{
+        background-size: 0 0;
+    }
+
+    100%{
+        background-size:100% 100%;
+        background-position: 100% 100%;
+    }
+}
+
+/************text-2**************/
+
+.text-2{
+    max-width:800px;
+    width:100%;
+    height:30px;
+    font-size:20px;
+    font-weight:600;
+    font-style:italic;
+    color: rgb(10, 20, 250);
+    padding:5px;
+    margin:20px auto;
+    text-align: center;
+    transition:2s ease-in-out;
+    text-transform:uppercase;
+    cursor:default;
+}
+
+.text-2 h4 > mark{
+    color: #0d11e0;
+    background: rgba(10, 200, 250, 1.0);
+    background:linear-gradient(160deg, rgba(10, 200, 250, 1.0)0%, rgba(20, 190, 260, 0.7) 50%, rgba(15, 190, 250, 1.0)100%);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.text-2:hover{
+    font-size: 22px;
+    box-shadow:2px 2px 5px rgba(20,40,200,0.7);
+}
+
+/***************sec-2*****************/
+
+.body-sec-2 .container p{
+    height:12vw;
+}
+
+.body-sec-2 .container .inf-2{
+    margin: 0 0 20px;
+}
+
+
+
+
+
+
+
